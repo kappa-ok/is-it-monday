@@ -1,6 +1,11 @@
 <html>
 <header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
   <title>Is It Monday?</title>
+
 </header>
 
 <body>
@@ -13,15 +18,12 @@
   
 <script>
 
-  let d = new Date();
-  let day = d.getDay();
+  var currentDate = new Date();
 
-  var paragraph = document.getElementById("p");
-
-  if (day != no){
-    paragraph.textContent += "No"
+  if (currentDate.getDay() === 1) {
+    document.querySelector('p').textContent = 'YES.';
   } else {
-    paragraph.textContent += "Yes"
+    document.querySelector('p').textContent = 'NO.';
   }
 
 
